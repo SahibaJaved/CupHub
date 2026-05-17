@@ -2,11 +2,16 @@
 
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
+<<<<<<< HEAD
 import 'package:firebase_auth/firebase_auth.dart';
 
 import '../providers/cart_provider.dart';
 import '../models/order_model.dart';
 import '../services/firestore_service.dart';
+=======
+
+import '../providers/cart_provider.dart';
+>>>>>>> 02bb75ff6ab1a819f0f9bb47a3027b0911e6f527
 import 'order_status_screen.dart';
 
 class PaymentScreen extends StatefulWidget {
@@ -31,11 +36,19 @@ class _PaymentScreenState
 
     return Scaffold(
 
+<<<<<<< HEAD
       backgroundColor: const Color(0xFFD8BBA9),
 
       appBar: AppBar(
 
         backgroundColor: const Color(0xFFD8BBA9),
+=======
+      backgroundColor: Colors.white,
+
+      appBar: AppBar(
+
+        backgroundColor: Colors.transparent,
+>>>>>>> 02bb75ff6ab1a819f0f9bb47a3027b0911e6f527
         elevation: 0,
 
         leading: IconButton(
@@ -308,6 +321,7 @@ class _PaymentScreenState
             /// CREATE ORDER BUTTON
             GestureDetector(
 
+<<<<<<< HEAD
               onTap: () async {
                 if (cart.items.isEmpty) {
                   ScaffoldMessenger.of(context).showSnackBar(
@@ -384,6 +398,34 @@ class _PaymentScreenState
                     SnackBar(content: Text("Failed to place order: $e")),
                   );
                 }
+=======
+              onTap: () {
+
+                /// SNACKBAR
+                ScaffoldMessenger.of(context)
+                    .showSnackBar(
+
+                  SnackBar(
+
+                    content: Text(
+
+                      "Order Created with $selectedPayment",
+                    ),
+                  ),
+                );
+
+                /// OPEN ORDER STATUS SCREEN
+                Navigator.push(
+
+                  context,
+
+                  MaterialPageRoute(
+
+                    builder: (context) =>
+                        const OrderStatusScreen(),
+                  ),
+                );
+>>>>>>> 02bb75ff6ab1a819f0f9bb47a3027b0911e6f527
               },
 
               child: Container(
@@ -415,7 +457,11 @@ class _PaymentScreenState
 
                     const Text(
 
+<<<<<<< HEAD
                       'Place Order',
+=======
+                      'Create Order',
+>>>>>>> 02bb75ff6ab1a819f0f9bb47a3027b0911e6f527
 
                       style: TextStyle(
                         color: Colors.white,

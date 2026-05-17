@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+<<<<<<< HEAD
 import 'package:firebase_core/firebase_core.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:provider/provider.dart';
@@ -81,3 +82,26 @@ class AuthChecker extends StatelessWidget {
     );
   }
 }
+=======
+import 'screens/splash_screen.dart'; 
+
+void main() {
+  runApp(CoffeeShopApp());
+}
+
+class CoffeeShopApp extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      debugShowCheckedModeBanner: false, 
+      title: 'Coffee Shop App',
+      theme: ThemeData(
+        primarySwatch: Colors.brown,
+        visualDensity: VisualDensity.adaptivePlatformDensity,
+      ),
+    
+      home: SplashScreen(), 
+    );
+  }
+}
+>>>>>>> 02bb75ff6ab1a819f0f9bb47a3027b0911e6f527

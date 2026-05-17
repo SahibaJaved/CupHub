@@ -35,7 +35,11 @@ class _ProfileScreenState extends State<ProfileScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+<<<<<<< HEAD
       backgroundColor: const Color(0xFFD8BBA9),
+=======
+      backgroundColor: Colors.white,
+>>>>>>> 02bb75ff6ab1a819f0f9bb47a3027b0911e6f527
 
       body: SafeArea(
         child: Padding(
@@ -111,7 +115,11 @@ class _ProfileScreenState extends State<ProfileScreen> {
                 child: Container(
                   padding: const EdgeInsets.all(15),
                   decoration: BoxDecoration(
+<<<<<<< HEAD
                     color: const Color.fromARGB(150, 62, 13, 10),
+=======
+                    color: Colors.red,
+>>>>>>> 02bb75ff6ab1a819f0f9bb47a3027b0911e6f527
                     borderRadius: BorderRadius.circular(10),
                   ),
                   child: const Center(

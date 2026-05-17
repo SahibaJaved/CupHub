@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import 'dart:async';
 import 'package:flutter/material.dart';
 import 'package:firebase_auth/firebase_auth.dart';
@@ -11,10 +12,16 @@ class FavoritesProvider extends ChangeNotifier {
   List<String> _favoriteIds = [];
   
   // We can still keep the full map locally for UI rendering if the UI depends on it
+=======
+import 'package:flutter/material.dart';
+
+class FavoritesProvider extends ChangeNotifier {
+>>>>>>> 02bb75ff6ab1a819f0f9bb47a3027b0911e6f527
   final List<Map<String, dynamic>> _favorites = [];
 
   List<Map<String, dynamic>> get favorites => _favorites;
 
+<<<<<<< HEAD
   FavoritesProvider() {
     _initFavoritesStream();
     FirebaseAuth.instance.authStateChanges().listen((user) {
@@ -89,5 +96,23 @@ class FavoritesProvider extends ChangeNotifier {
   void dispose() {
     _favoritesSubscription?.cancel();
     super.dispose();
+=======
+  void toggleFavorite(Map<String, dynamic> item) {
+    final index = _favorites.indexWhere(
+      (e) => e['name'] == item['name'],
+    );
+
+    if (index != -1) {
+      _favorites.removeAt(index);
+    } else {
+      _favorites.add(item);
+    }
+
+    notifyListeners();
+  }
+
+  bool isFavorite(Map<String, dynamic> item) {
+    return _favorites.any((e) => e['name'] == item['name']);
+>>>>>>> 02bb75ff6ab1a819f0f9bb47a3027b0911e6f527
   }
 }

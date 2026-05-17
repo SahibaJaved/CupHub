@@ -15,7 +15,11 @@ class CartScreen extends StatelessWidget {
 
     return Scaffold(
 
+<<<<<<< HEAD
       backgroundColor: const Color(0xFFD8BBA9),
+=======
+      backgroundColor: const Color(0xFFFDF8F5),
+>>>>>>> 02bb75ff6ab1a819f0f9bb47a3027b0911e6f527
 
       body: SafeArea(
 
